@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css_materialize/materialize.min.css"  media="screen,projection"/>
+  
+  <link rel="stylesheet" href="css_materialize/materialize.css">
+  <link rel="stylesheet" href="js_materialize/materialize.js">
+    <style>
+      #map {
+        height: 100%;
+      }
+	  
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+	  
+	  .teste {
+		width: 33.3%;
+	  }
+    </style>
+  </head>
+  <body>
+
+  <nav class="nav-extended">
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab teste"><a href="#">HOME</a></li>
+        <li class="tab teste"><a class="active" href="#">LOCALIZAÇÃO ATUAL</a></li>
+        <li class="tab teste"><a href="#">VOLTAR</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+    <div id="map" style="height: 94%;"></div>
+
+    <script>
+	
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+	
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6olVX64q598YGBgx-Jl1Ql3advwCgzNw&callback=initMap"
+    async defer></script>
+  </body>
+</html>
